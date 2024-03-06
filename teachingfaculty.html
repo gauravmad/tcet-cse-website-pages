@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty CS&E Cyber Security</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="Images/tcetlogo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="layout/scripts/topb.js"></script>
+    <script type="text/javascript" language="javascript" src="layout/scripts/jquery.dropdown.js"></script>
+    <style>
+      * {
+        margin-top:0px; ;
+        padding: 0;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      table.head {
+        width: 100%;
+        height: 147px;
+        background-color: #694D1B;
+        border: 3px solid whitesmoke;
+      }
+
+      img.banner {
+        width: 992px;
+        border-color: #2D3465;
+      }
+
+      nav.navbar {
+        display: block;
+        height: 30px;
+        background-color: #153f74;
+      }
+
+      ul.nav {
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        padding-top: 5px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: 600;
+      }
+
+      li.nav {
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a.profilelink {
+        color: #2D3465;
+      }
+
+      a.close {
+        color: red;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+      }
+
+      a.viewprofile {
+        color: darkgreen;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #2D3465;
+        background-color: aliceblue;
+      }
+
+      div.container1 {
+        width: 940px;
+        height: fit;
+        margin: auto;
+        background-color: white;
+        /* box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.365); */
+        padding: 20px;
+        padding-top: 80px;
+        margin-bottom: 2rem;
+        /* justify-content: center; */
+
+      }
+
+
+      h1 {
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 1px;
+      }
+
+      h1.cse {
+        justify-content: center;
+        align-items: center;
+        color: #004080;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        letter-spacing: 1px;
+      }
+
+      h3#page_title {
+        color: #004080;
+        font-size: 22px;
+        font-weight: 800;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      h3#page_title1 {
+        color: #004080;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      h3 {
+        color: #153f74;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+      }
+
+      h4 {
+        color: #694D1B;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+      }
+
+      hr {
+        margin-top: 10px;
+      }
+
+      hr.bar {
+        color: #00408019;
+
+      }
+
+      hr.heading {
+        margin-top: 4px;
+        color: #694c1b46;
+      }
+
+      h2 {
+        font-size: 15px;
+        color: azure;
+        letter-spacing: 1px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-top: 5px;
+      }
+
+      p {
+        font-size: 15px;
+        text-align: left;
+        /* letter-spacing: 1px; */
+        font-weight: 500;
+        padding: 15px;
+        /* padding-left: 20px  */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      }
+
+
+      /* Faculty */
+      a.Professor {
+        font-family: Arial, Helvetica, sans-serif;
+        color: green;
+        font-size: 15px;
+      }
+
+      ul.pleft {
+        padding-left: 30px;
+        padding-top: 15px;
+      }
+
+      div#sidebar {
+        width: 22.699%;
+        clear: left;
+      }
+
+      div#content {
+        width: 72%;
+        display: block;
+        /* float: ; */
+        margin-left: 250px;
+        margin-top: -180px;
+      }
+
+      /* Faculty Holder */
+      div.facultyHolder {
+        padding: 20px;
+        background-color: #faefdb;
+      }
+
+      div#mamimg {
+        width: 180px;
+        float: left;
+      }
+
+      div#DitixaMethaExp {
+        padding-left: 40px;
+      }
+
+      div#VidyaMamExp {
+        padding-left: 40px;
+      }
+
+      div#AsmitaExp {
+        padding-left: 40px;
+      }
+
+      div#AniketExp {
+        padding-left: 40px;
+      }
+
+      div#ArchanaExp {
+        padding-left: 40px;
+      }
+
+      .extendedlist {
+        margin-left: 5px;
+      }
+
+      ol {
+        margin-left: 30px;
+      }
+
+      ul {
+        margin-left: 30px;
+      }
+
+      li {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 400;
+      }
+
+      .midboldtxtblue {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      @media (max-width: 810px) {
+        body {
+          width: 100vw;
+          margin: 0;
+          overflow-x: hidden;
+          background-image: none;
+        }
+
+        div#main_menu {
+          margin-left: 0px;
+        }
+
+        div#sidebar {
+          width: 90vw;
+          margin: 0;
+          clear: none;
+        }
+
+        #top_right_content {
+          width: 100%;
+          margin-top: 200px;
+        }
+
+        div#content {
+          width: 90vw;
+          margin: 0;
+          margin-left: 0px;
+          margin-top: -8rem;
+          height: 100%;
+        }
+
+        div#mamimg {
+          float: none;
+          width: 40%;
+          /* margin: auto; */
+        }
+
+        div.facultyholder {
+          width: 80vw;
+          padding: 10px;
+        }
+
+        div.container1 {
+          width: 100vw;
+          height: fit-content;
+          margin: 0px;
+          box-shadow: none;
+        }
+      }
+
+      /* 
+@media only screen and (max-width: 723px) {
+    div#content{
+        font-size: larger;
+    }
+} */
+    </style>
+  </head>
+  <script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" language="javascript" src="scripts/hoverIntent.js"></script>
+  <script type="text/javascript" src="scripts/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#slider').nivoSlider();
+    });
+  </script>
+  <script type="text/javascript" language="javascript">
+    function show(obj) {
+      document.getElementById(obj).style.display = "block";
+    }
+    function hide(obj) {
+      document.getElementById(obj).style.display = "none";
+    }
+  </script>
+</head>
+</head>
+
+<body>
+  <div class="container1">
+    <div id="main_menu">
+      <script type="text/javascript">contentDispdemo();</script>
+    </div>
+
+    <body id="top">
+      <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+      <div class="wrapper row3">
+        <div class="rounded">
+          <main class="container clear">
+            <!-- main body -->
+
+            <div id="sidebar" class="sidebar one_quarter first">
+              <h1 class="cse">Computer Science Engineering (Cyber Security)</h1>
+              <hr>
+              <nav class="sdb_holder">
+                <ul class="pleft">
+                  <!-- <li><a class="Professor" href="ceFaculty_professor.html">Associate Professor</a></li>
+                  <li><a class="Professor" href="ceFaculty_AssociateProfessor.html">Assistant Professor</a></li> -->
+                  <li><a class="Professor" href="teachingfaculty.html">Teaching Faculty</a></li>
+                  <li><a class="Professor" href="non-teaching.html">Non-Teaching Faculty</a></li>
+                </ul>
+              </nav>
+              <hr>
+            </div>
+            <br>
+
+
+            <div id="content" class="three_quarter">
+              <div id="top_right_content">
+                <h3 id="page_title">Computer Science & Engineering &nbsp;Cyber Security (CS&E) </h3>
+                <hr class="bar">
+                <br>
+                <div id="bar_cleaner"></div>
+                <h3 id="page_title1"><cite><span>Associate Professor Faculty Profile</span></cite></h3>
+                <hr class="bar">
+                <br />
+
+                <!-- Faculty Names -->
+
+
+
+                <!-- Vidyadhari Mam -->
+                <div class="facultyHolder">
+                  <div id="mamimg" class="one_third first"><img src="https://bunchup.s3.amazonaws.com/vidyadhari.jpeg"
+                      style="height: 160px;
+              width: 117px; object-fit: cover;" alt="Photo" width="94" height="125" />
+
+                    <strong class="midboldtxtblue"><a class="profilelink" href=""><br> &nbsp;&nbsp;&nbsp;&nbsp;Profile
+                        Link</a></strong><br />
+                  </div>
+
+
+                  <div class="qualificationHolder"><span class="midboldtxtblue"><br />
+                      <h3>Dr. Vidyadhari Singh</h3>
+                      <h4>Associate Professor & H.O.D UG - CS&E</h4>
+                    </span><br />
+                    <br />
+
+                    <strong class="midboldtxtblue">QUALIFICATION:</strong><br />
+                    <ol class="extendedlist" style="padding-top:0px; margin-top:0px; float:left; padding-left: 30px;">
+                      <li>PHD (Computer Engineering)</li>
+                      <li>M.E (Computer Engineering)</li>
+                      <li>B.E (IT Engineering)</li>
+                    </ol>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <a class="viewprofile" href="javascript:void(0);" onClick="show('VidyaMamExp');"> <img id=""
+                        style="float:right;" src="https://bunchup.s3.amazonaws.com/viewProfile.gif" alt="View Profile" width="122"
+                        height="30" /></a>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div id="VidyaMamExp" style="display:none;"> <strong class="midboldtxtblue">EXPERIENCE:</strong>
+                    <ul>
+                      <li>Teaching: 15 years 07 months </li>
+                    </ul>
+                    <br />
+                    <strong class="midboldtxtblue">AREA OF SPECIALIZATION:</strong>
+                    <ol>
+                      <li>Cyber Security</li>
+                      <li>Cryptography</li>
+                      <li>Ethical Hacking</li>
+                      <li>Network Security</li>
+                    </ol>
+                    <br />
+                    <strong class="midboldtxtblue">ACHIEVEMENTS:</strong>
+                    <ol>
+                      <li>ISO 9001-2008 Certified Internal Auditor for quality assurance</li>
+                      <li>Won First Prize for presenting “Student Leadership Program (TCET initiative) ” in BEQET (Best
+                        Educational Quality
+                        Enhancement Team) President Team 2021 organized by NCQM</li>
+                      <li>Converting Challenges into Opportunities (4 Weeks) University of California, San Diego (Grade
+                        Obtained:
+                        90%)
+                      </li>
+                      <li>. Information Security: Context and Introduction (5 Weeks) by University of London (Grade
+                        Obtained: 94%)</li>
+                      <li>Get Interactive: Practical Teaching with Technology (3 Weeks) by University of London,
+                        Bloomsbury Learning
+                        Exchange (Grade Obtained: 83%)</li>
+                      <li>Digital Footprint (3 Weeks) by University of Edinburgh (Grade Obtained: 69%)
+                        5. Inspiring and Motivating Individuals (4 Weeks) by University of Michigan, USA (Grade
+                        Obtained: 87%)
+                      </li>
+                      <li>Introduction to User Experience Design (5 Weeks) by Georgia Institute of Technology (Grade
+                        Obtained: 89%)</li>
+                      <li> Air Pollution – a Global Threat to our Health (3 Weeks) by University of Copenhagen (Grade
+                        Obtained: 90%)</li>
+                      <li>Introduction to Cybersecurity Tools & Cyber Attacks (4 Weeks) by IBM (Grade Obtained: 84%)
+                      </li>
+                      <li>DDoS Attacks and Defenses (4 Weeks) by University of Colorado Systems (Grade Obtained: 93%)
+                      </li>
+                      <li>Self Awareness & the Effective Leader (5 Weeks) by Rice University (Grade Obtained: 80%) 11.
+                        Classical
+                        Cryptosystems & Core Concepts (3 Weeks) by University of Colorado System (Grade Obtained: 80%)
+                        12.
+                        Proactive Computer Security (5 Weeks) by University of Colorado System (Grade Obtained: 94%)
+                      </li>
+                      <li>Foundations of Teaching for Learning: Curriculum (6 Weeks) by Common Wealth Education Trust
+                        (Grade
+                        Obtained: 72%)</li>
+                      <li>Project Management: The Basics for Success (4 Weeks) by University of California (Grade
+                        Obtained: 94%)</li>
+                      <li>Basics Elements of Design: Design Principles and Software Overview (3 Weeks) by University
+                        of Colorado Boulder (Grade Obtained: 86%) 16. Foundations of Everyday Leadership (4 Weeks) by
+                        University of Illinois at Urbana-Champaign</li>
+                      <li>AI for everyone (4 Weeks) by deeplearning.ai (Grade Obtained: 84%)</li>
+                      <li>CyberSecurity & it’s Ten Domains (University System of Georgia) Grade: 85%</li>
+                      <li>Introduction to TCP/IP (Yonsei University) Grade: 76%</li>
+                      <li>Budgeting & Scheduling Projects (University of California) Grade: 86%</li>
+                      <li>Introduction to Software Product Management (University of Alberta) Grade: 80%
+                      </li>
+                      <li>Software Processes & Agile Practices (University of Alberta) Grade: 88%
+                      </li>
+                      <li>Initiating & Planning Projects (University of California, Irvine) Grade: 82%</li>
+                      <li>IT Project Management (Indian School of Business) Grade: 80%</li>
+                    </ol>
+                    <br>
+                    <strong class="midboldtxtblue">Paper published / Presented :</strong>
+                    <ul>
+                      <li>Vidyadhari S, “Design and Development of an Empirical Model to predict cognitive learning
+                        level using Bloom Taxonomy for undergraduate Engineering Students”, International Conference on
+                        Information and Communication Technology for Competitive Strategies (ICTCS) (Dec 2019), 1st
+                        Edition, Dec 2019</li>
+                      <li>Vidyadhari S,”Proposed Work for Modification of AES Mix Column “, International Journal for
+                        Research in Applied Science and Engineering Technology (IJRASET)Volume 7 Issue XI Nov 2019</li>
+                      <li>Vidyadhari S,”Botnets:Architecture and Detection Techniques”, International Journal of
+                        Scientific & Engineering Research Volume 11, Issue 1, Feb 2020</li>
+                      <li>Vidyadhari S,"Comparative Analysis of Empirical & Biometric Based Model used for Assessing
+                        Cognitive Learning Level for Undergraduate Engineering Students”, STRAD RESEARCH
+                        Volume-7-Issue-12-2020 12 2020 NISCAIR, UGC Care</li>
+                      <li>Vidyadhari S, “Analysis of Facial Expressions for Predicting Student's Learning Level”, IJCSE,
+                        Vol.8, Issue.2 (SCOPUS INDEXED), Volume-8 , Issue-2, Page no. 87-92, Feb 2020</li>
+                      <li>Placement Test Web Portal, IOSR Journal of Computer Engineering (IOSR-JCE), Pages-58-61, 2017
+                      </li>
+                      <li>Vidyadhari Singh, “Cloud Based Face Detection, Recognition and Analysis”, Conference on Recent
+                        Trends in Computer Engineering 2018</li>
+                      <li>Vidyadhari Singh, “Cloud based Vehicle Monitoring System”, Conference on Recent Trends in
+                        Computer Engineering 2018</li>
+                      <li>V. R. Singh, “Quantum Key Distribution: An Application of Quantum Cryptography”, CRTCE-2018,
+                        ISBN: 978-0- 9994483-0-4, February 2018</li>
+                      <li>Dr. Lochan Jolly, Mrs. Vidyadhari Singh, Mr. Amol Dapkekar, “Best Practices: Student
+                        Leadership Programme, CHSTE-2019, MULTICON-W 2019</li>
+                      <li>Vidyadhari Singh, Shailesh Sangle, Virtual Reality and its applications, International
+                        Conference on Intelligent Systems And Communication Networks (IC-ISCN 2019) ISBN:
+                        978-1-7329562-1-6</li>
+                      <li>Vidyadhari Singh, ”Serverless Cloud Architecture based School Bus Tracking System”,
+                        IJRASET-2019</li>
+                      <li>Vidyadhari Singh, “Design and Development of Educational Game using Virtual Reality”, IC-ISCN,
+                        MULTICON-W 2019</li>
+                      <li>Vidyadhari Singh, “Efficient Recommendation System for IT problems using Image Recognition,”,
+                        IC-ISCN, MULTICON-W 2019</li>
+                      <li>R. R. Sedamkar, Sheetal Rathi, Vaishali Nirgude, Vidyadhari Singh, “MODERN EDUCATION APPROACH
+                        FOR OBE”, International Conference on Intelligent Computing and Networking IC-ICN, 2020</li>
+                      <li>Vidyadhari Singh, “Implementation Of A System For Real Time Colour Recognition”, International
+                        Conference on Intelligent Computing and Networking IC-ICN, 2020</li>
+                      <li>Vidyadhari Singh, “Implementing Digital Public Intercom for Railway Station”, International
+                        Conference on Intelligent Computing and Networking IC-ICN, 2020</li>
+                      <li>Vidyadhari Singh, “implementing emotions detection system using facial expression”,
+                        International Conference on Intelligent Computing and Networking IC-ICN, 2020</li>
+                      <li>Vidyadhari Singh, “ASKME: A Conversing Agent of Indian Railway”, IC-ICN 2020 (MULTICON-W), Feb
+                        2020</li>
+                      <li>Lochan Jolly, Vidyadhari Singh and Amol Dapkekar, “Augmenting Student Leadership through
+                        Inspiration”, CHSTE, MULTICON-W 2020, Feb 2020</li>
+                      <li>Vidhyadhari Singh, “Advanced Heuristics for detecting Phishing Websites”, IC-ICN-2021</li>
+                      <li>Vidyadhari Singh, “Design and Development of Real Time Driver’s Drowsiness Detection and Alert
+                        System”, IC-ICN-2021</li>
+
+                    </ul>
+                    <strong class="midboldtxtblue"><a class="close" href="javascript:void(0);"
+                        onClick="hide('VidyaMamExp');"> <img style="float:right;" src="https://bunchup.s3.amazonaws.com/close.gif" alt="Close"
+                          width="83" height="30" /></a></strong><br />
+                    <br />
+                  </div>
+                </div>
+                <br />
+                <br />
+
+                <div id="bar_cleaner"></div>
+                <h3 id="page_title1"><cite><span>Assistant Professor Faculty Profile</span></cite></h3>
+                <hr class="bar">
+                <br />
+                <br>
+
+                <!-- Ditixa Mam -->
+                <div class="facultyHolder">
+                  <div id="mamimg" class="one_third first"><img src="https://bunchup.s3.amazonaws.com/ditixa+mam.jpg" style="height: 160px;
+                width: 117px;" alt="Photo" width="94" height="125">
+
+                    <strong class="midboldtxtblue"><a class="profilelink" href=""><br> &nbsp;&nbsp;&nbsp;&nbsp;Profile
+                        Link</a></strong><br />
+
+                  </div>
+
+
+                  <div class="qualificationHolder"><span class="midboldtxtblue"><br />
+                      <h3>Ditixa Mehta</h3>
+                      <h4>Assistant Professor</h4>
+                    </span><br />
+                    <br />
+
+                    <strong class="midboldtxtblue">QUALIFICATION:</strong><br>
+                    <ol class="extendedlist" style="padding-top:0px; margin-top:0px; float:left; padding-left: 30px;">
+                      <li>Ph.D Pursuing (Computer Engg.)</li>
+                      <li>M.Tech (Computer Engg.)</li>
+                      <li>B.E (Computer Engg.)</li>
+                    </ol>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <a class="viewprofile" href="javascript:void(0);" onClick="show('DitixaMethaExp');"> <img id=""
+                        style="float:right;" src="https://bunchup.s3.amazonaws.com/viewProfile.gif" alt="View Profile" width="122"
+                        height="30" /></a>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div id="DitixaMethaExp" style="display:none;"> <strong class="midboldtxtblue">EXPERIENCE:</strong>
+                    <ul>
+                      <li>Teaching: 13 years 06 Months</li>
+                      <!-- <li> Industry and R&D: 5 years 5 months</li> -->
+                    </ul>
+                    <br />
+                    <strong class="midboldtxtblue">AREA OF SPECIALIZATION:</strong>
+                    <ol>
+                      <li>Computer Programming</li>
+                      <li>Data Structure and Algorithms</li>
+                      <li>Computer Networking</li>
+                      <li>Internet of Things</li>
+                      <li>Cryptography & Networking Security</li>
+                      <li>Computer Graphics</li>
+                    </ol>
+                    <br />
+                    <strong class="midboldtxtblue">ACHIEVEMENTS:</strong>
+                    <ol>
+                      <li>Reviewer for International Conference</li>
+                      <li>Gate 2012 Qualified</li>
+                      <li>Handled Consultancy Project i-learn</li>
+                      <li>Syllabus Revision Committee member at CHARUSAT University</li>
+                      <li>Associated with Mumbai University, CHARUSAT, GTU, DDU and NIELIT (DOEACC) as Paper Setter and
+                        Examiner</li>
+                      <li>Trainer for Pre-Placement Training on C</li>
+                      <li>Member of University Industry Interaction Cell</li>
+                      <li>Established SOPHOS Security lab in collaboration with SOPHOS Company</li>
+                      <li>Worked for a Research Proposal on “Image Segmentation using K-MEANS Clustering and its
+                        Applications in Computer Vision and Pattern Recognition” in Toyota Technological Institute,
+                        Japan</li>
+                      <li>Member of the Requirement Analysis of Exam Module (CBCS) for e-governance project</li>
+                      <li>Conducted IoT Internship</li>
+                      <li>NAAC and NBA Coordinator</li>
+                      <li>Conducted funded seminars and workshops</li>
+                      <li>Attended (Certified) 50+ Seminars, Workshops, STTPs, FDPs of IITs, edx, NPTEL, Coursera</li>
+                    </ol>
+                    <br>
+                    <strong class="midboldtxtblue">Paper published:</strong>
+                    <ol>
+                      <li>International Conference: 11</li>
+                      <li>National Conference: 01</li>
+                      <li>Journals: 09</li>
+                      <li>Poster : 03</li>
+                    </ol>
+                    <br>
+                    <strong class="midboldtxtblue">Projects Guided:</strong>
+                    <ul>
+                      <li>40+ at UG level</li>
+                    </ul>
+
+                    <strong class="midboldtxtblue"><a class="close" href="javascript:void(0);"
+                        onClick="hide('DitixaMethaExp');"> <img style="float:right;" src="https://bunchup.s3.amazonaws.com/close.gif" alt="Close"
+                          width="83" height="30" /></a></strong><br />
+                    <br />
+                  </div>
+                </div>
+
+                <br />
+                <br />
+                <!-- Asmita Mam -->
+                <div class="facultyHolder">
+                  <div id="mamimg" class="one_third first">
+                    <img src="https://bunchup.s3.amazonaws.com/asmitamamnew.jpeg" style="height: 160px;
+                width: 117px;" alt="Photo" width="94" height="125" />
+
+                    <strong class="midboldtxtblue"><a class="profilelink" href=""><br> &nbsp;&nbsp;&nbsp;&nbsp;Profile
+                        Link</a></strong><br />
+                  </div>
+
+
+                  <div class="qualificationHolder"><span class="midboldtxtblue"><br />
+                      <h3>Asmita Marathe</h3>
+                      <h4>Assistant Professor</h4>
+                    </span><br />
+                    <br />
+
+                    <strong class="midboldtxtblue">QUALIFICATION:</strong>
+                    <br>
+                    <ol class="extendedlist" style="padding-top:0px; margin-top:0px; float:left; padding-left: 30px;">
+                      <li>M.E.(IT)</li>
+                      <li>B.E.(IT)</li>
+                    </ol>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <a class="viewprofile" href="javascript:void(0);" onClick="show('AsmitaExp');"> <img id=""
+                        style="float:right;" src="https://bunchup.s3.amazonaws.com/viewProfile.gif" alt="View Profile" width="122"
+                        height="30" /></a>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <br>
+                  <div id="AsmitaExp" style="display:none;"> <strong class="midboldtxtblue">EXPERIENCE:</strong>
+                    <ul>
+                      <li>Teaching: 7 years, 01 months </li>
+                    </ul>
+                    <br />
+                    <strong class="midboldtxtblue">AREA OF SPECIALIZATION:</strong><br>
+                    <ol>
+                      <li>Artificial Intelligence and Data science</li>
+                      <li>Naurla Langauge Processing</li>
+                      <li>Cyber Security and Intelligence</li>
+                    </ol>
+                    <br />
+                    <strong class="midboldtxtblue">ACHIEVEMENTS:</strong><br>
+                    <ol>
+                      <li>Organize Faculty Development Program</li>
+                      <li>Short term training program</li>
+                      <li>Seminars and Guest lectures.</li>
+                      <li>workshops</li>
+                    </ol>
+                    <br />
+                    <strong class="midboldtxtblue">Paper published / Presented :</strong>
+                    <ul>
+                      <li>National Conference: 02</li>
+                      <li>International Conference : 02</li>
+                    </ul>
+                    <strong class="midboldtxtblue"><a class="close" href="javascript:void(0);"
+                        onClick="hide('AsmitaExp');"> <img style="float:right;" src="https://bunchup.s3.amazonaws.com/close.gif" alt="Close"
+                          width="83" height="30" /></a></strong><br />
+                    <br />
+                  </div>
+                </div>
+                <br />
+                <br />
+              </div>
+
+              <!-- Aniket Mishra -->
+              <div class="facultyHolder">
+                <div id="mamimg" class="one_third first">
+                  <img src="https://bunchup.s3.amazonaws.com/Aniket.png" style="height: 160px;
+              width: 117px; object-fit: cover;" alt="Photo" width="94" height="125" />
+
+                  <strong class="midboldtxtblue"><a class="profilelink" href=""><br> &nbsp;&nbsp;&nbsp;&nbsp;Profile
+                      Link</a></strong><br />
+                </div>
+
+
+                <div class="qualificationHolder"><span class="midboldtxtblue"><br />
+                    <h3>Mr. Aniket Mishra</h3>
+                    <h4>Assistant Professor</h4>
+                  </span><br />
+                  <br />
+
+                  <strong class="midboldtxtblue">QUALIFICATION:</strong>
+                  <br>
+                  <ol class="extendedlist" style="padding-top:0px; margin-top:0px; float:left; padding-left: 30px;">
+                    <li>Pursuing a Post-Doc in Communication & Computer Engg.</li>
+                    <li>Ph. D in Communication & Computer Engg.</li>
+                    <li>M. E in Control Systems </li>
+                    <li>B.E. in Electronics & Telecommunication</li>
+                  </ol>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <a class="viewprofile" href="javascript:void(0);" onClick="show('AniketExp');"> <img id=""
+                      style="float:right;" src="https://bunchup.s3.amazonaws.com/viewProfile.gif" alt="View Profile" width="122"
+                      height="30" /></a>
+                </div>
+                <div style="clear:both;"></div>
+                <br>
+                <div id="AniketExp" style="display:none;"> <strong class="midboldtxtblue">EXPERIENCE:</strong>
+                  <ul>
+                    <li>Teaching: 09 years</li>
+                  </ul>
+                  <br />
+                  <strong class="midboldtxtblue">AREA OF SPECIALIZATION:</strong><br>
+                  <ol>
+                    <li>Soft Computing</li>
+                    <li>Web Development</li>
+                    <li>Machine Learning</li>
+                    <li>Data Analytics</li>
+                    <li>Artificial Intelligience & Data Science</li>
+                  </ol>
+                  <br />
+                  <strong class="midboldtxtblue">ACHIEVEMENTS:</strong><br>
+                  <ol>
+                    <li>Cleared PET | 2022</li>
+                    <li>Conducted Faculty Development Programming on Introduction to Python and Data Analytics.</li>
+                    <li>Guided Students for 6 consultancy projects.</li>
+                    <li>Guided 4 Outhouse Industry Projects.</li>
+                    <li>Designed Scheme for Bachelor of Vocational.</li>
+                    <li>Conducted FDP on Python for Engineering faculties.</li>
+                  </ol>
+                  <br />
+                  <strong class="midboldtxtblue">Paper published / Presented :</strong>
+                  <ul>
+                    <li>Published a paper based on “Statistical Data Analysis using GPT-3” in IEEE December -2</li>
+                    <li>Aniket Mishra “Deep Learning based Parking Prediction using LSTM approach”. (ICTIS 2020
+                      Volume -02 book has been published and is available on Springer Website.)</li>
+                    <li>Aniket Mishra, Rina Patil, Kaushik Dubey “Augmented reality and Image Processing in
+                      Education."</li>
+                    <li>Adil Shaikh, Aniket Mishra, Meenu Bhatia and Foram Shah, “Clickbait Detection Using Deep
+                      Learning Approach:</li>
+                    <li>Aniket Mishra, Foram Shah, Niki Modi, Meenu Bhatia, Saloni Dhuru Consumer Analysis Behaviour
+                      of E-Commerce.</li>
+                    <li>Aniket Mishra, Foram Shah and Meenu Bhatia, “Combining Information using Advanced SQL JOIN
+                      operation”</li>
+                  </ul>
+                  <strong class="midboldtxtblue"><a class="close" href="javascript:void(0);"
+                      onClick="hide('AniketExp');"> <img style="float:right;" src="https://bunchup.s3.amazonaws.com/close.gif" alt="Close"
+                        width="83" height="30" /></a></strong><br />
+                  <br />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <!-- Archana Mam -->
+              <div class="facultyHolder">
+                <div id="mamimg" class="one_third first">
+                  <img src="https://bunchup.s3.amazonaws.com/archana+mam.jpg" style="height: 160px;
+              width: 117px;" alt="Photo" width="94" height="125" />
+
+                  <strong class="midboldtxtblue"><a class="profilelink" href=""><br> &nbsp;&nbsp;&nbsp;&nbsp;Profile
+                      Link</a></strong><br />
+                </div>
+
+
+                <div class="qualificationHolder"><span class="midboldtxtblue"><br />
+                    <h3>Mrs. Archana Kulkarni</h3>
+                    <h4>Assistant Professor</h4>
+                  </span><br />
+                  <br />
+
+                  <strong class="midboldtxtblue">QUALIFICATION:</strong>
+                  <br>
+                  <ol class="extendedlist" style="padding-top:0px; margin-top:0px; float:left; padding-left: 30px;">
+                    <li>Phd Pursuing (Electronics and Communications)</li>
+                    <li>M. E (Electronics and Telecommunications.)</li>
+                    <li>B.E (Electronics)</li>
+                  </ol>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <a class="viewprofile" href="javascript:void(0);" onClick="show('ArchanaExp');"> <img id=""
+                      style="float:right;" src="https://bunchup.s3.amazonaws.com/viewProfile.gif" alt="View Profile" width="122"
+                      height="30" /></a>
+                </div>
+                <div style="clear:both;"></div>
+                <br>
+                <div id="ArchanaExp" style="display:none;"> <strong class="midboldtxtblue">EXPERIENCE:</strong>
+                  <ul>
+                    <li>Teaching: 09 years</li>
+                  </ul>
+                  <br />
+                  <strong class="midboldtxtblue">AREA OF SPECIALIZATION:</strong><br>
+                  <ol>
+                    <li>Signal Processing</li>
+                    <li>Communications and Networks</li>
+                    <li>Digital Electronics & Technology</li>
+                    <li>Communication Securities</li>
+                    <li>Digital Forensics</li>
+                  </ol>
+                  <br />
+                  <strong class="midboldtxtblue">ACHIEVEMENTS:</strong><br>
+                  <ol>
+                    <li>Organized various International Internship Activities</li>
+                    <li>Industrial visits, Outdoor Projects</li>
+                    <li>National Seminars Project Exhibitions</li>
+                    <li>First prize for paper presentation at NIT Warangal</li>
+                    <li>National Scholarship winner</li>
+                  </ol>
+                  <br />
+                  <strong class="midboldtxtblue">Paper published / Presented :</strong>
+                  <ul>
+                    <li>Automatic Attendance monitoring system in ICHSTE 2023.</li>
+                    <li>Comparison of Asymmetrical Multilevel Inverter Topologies for Photovoltaic System in ICHSTE 2023</li>
+                    <li>National Conference held at College of Engg.Pandharpur</li>
+                    <li>National Conference held at Parshwanath College of Engg. Thane.</li>
+                    <li>International Conference : 10</li>
+                    <li>National Conference: 08</li>
+                    <li>General Publication: 01</li>
+                  </ul>
+                
+                  <strong class="midboldtxtblue"><a class="close" href="javascript:void(0);"
+                      onClick="hide('ArchanaExp');"> <img style="float:right;" src="https://bunchup.s3.amazonaws.com/close.gif" alt="Close"
+                        width="83" height="30" /></a></strong><br />
+                  <br />
+                </div>
+              </div>
+              <br />
+              <br />
+              <!-- end top_right_content-->
+
+              <div align="right"> <!--<script language="Javascript">
+      document.write("Last modified on: " + document.lastModified +"");
+      </SCRIPT>-->
+                <SCRIPT LANGUAGE="JavaScript">
+                  update = new Date(document.lastModified)
+                  theMonth = update.getMonth() + 1
+                  theDate = update.getDate()
+                  theYear = update.getFullYear()
+                  document.writeln("<I>Last Updated On:" + theDate + "/" + theMonth + "/" + theYear + "</I>")
+                </SCRIPT>
+              </div>
+              <br />
+            </div>
+
+        </div>
+      </div>
+      <div id="footer_menu">
+        <script type="text/javascript">footerDisp();</script>
+      </div>
+
+      <!-- JAVASCRIPTS -->
+      <script src="../layout/scripts/jquery.min.js"></script>
+      <script src="../layout/scripts/jquery.fitvids.min.js"></script>
+      <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    </body>
+
+</html>
+</div>
+
+</body>
+
+</html>
