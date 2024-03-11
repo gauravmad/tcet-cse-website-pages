@@ -1,103 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeTable CS&E Cyber Security</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="Images/tcetlogo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      div.container1 {
+        width: 75vw;
+        height: auto;
+        margin: auto;
+        background-color: white;
+        box-shadow: 1px 1px 10px 1px rgba(123, 123, 123, 0.365);
+        padding-top: 30px;
+        padding: 20px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
 
-<head>
+      #timeTable {
+        overflow: hidden;
+      }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TimeTable CS&E Cyber Security</title>
-        <!-- <link rel="stylesheet" href="style.css"> -->
-        <link rel="icon" href="Images/tcetlogo.png" type="image/x-icon">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <style>
-            div.container1 {
-                width: 75vw;
-                height: auto;
-                margin: auto;
-                background-color: white;
-                box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.365);
-                padding-top: 30px;
-                padding: 20px;
-                margin-bottom: 2rem;
-                overflow: hidden;
-            }
+      .tt {
+        width: 80vw;
+      }
 
-            #timeTable {
-                overflow: hidden;
-            }
+      h1 {
+        text-align: center;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+      }
+      a {
+        text-decoration: none;
 
-            .tt {
-                width: 80vw;
-            }
+        color: #000;
+      }
+      .download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .download button {
+        border: none;
+        background-color: antiquewhite;
+        border-radius: 10;
+        padding: 1vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        font-size: 2.5vh;
+      }
 
-            h1 {
-                text-align: center;
-            }
-            a {
-                text-decoration: none;
-               
-                color: #000;
-            }
-            button{
-                
-                padding: 5px;
-                display: flex;
-                justify-items: end;
+      a:visited {
+        color: #000;
+      }
 
-            }
+      a:hover {
+        color: #000;
+      }
 
-            a:visited {
-                color: #000;
-            }
+      a:active {
+        color: #000;
+      }
 
-            a:hover {
-                color: #000;
-            }
+      @media (max-width: 768px) {
+        div.container1 {
+          width: 75vw;
+          height: auto;
+          margin: auto;
+          padding-top: 20px;
+          padding: 5px;
+          margin-bottom: 2rem;
+          overflow: hidden;
+        }
 
-            a:active {
-                color: #000;
-            }
+        h1 {
+          font-size: smaller;
+        }
+        button {
+          padding: 2px;
+        }
+        a {
+          font-size: smaller;
+        }
+      }
+    </style>
+  </head>
 
-            @media (max-width: 768px) {
-                div.container1 {
-                    padding-top: 20px;
-                    padding: 5px;
-                    margin-bottom: 2rem;
-                    overflow: hidden;
-                }
-
-                h1 {
-                    font-size: smaller;
-                }
-                button{
-                    padding: 2px;
-    
-                }
-                a {
-                    font-size: smaller;
-                }
-                
-            }
-        </style>
-    </head>
-
-<body>
+  <body>
     <div class="container1">
-        <h1>SE TimeTable</h1>
-        <div id="timeTable">
-            <img src="https://bunchup.s3.amazonaws.com/Final+TT_Even+CS%26E+23-24.jpg" class="tt" alt="se-timetable" />
-        </div>
-        <button> <a href="timetable/SE-SEM-VI.pdf" class="download-bttn" target="_blank">Download PDF</a></button>
-       
-        <h1>TE TimeTable</h1>
-        <div id="timeTable">
-            <img src="https://bunchup.s3.amazonaws.com/Final+TT_Even+CS%26E+23-24+(2).jpg" class="tt"
-                alt="se-timetable" />
-        </div>
-        <button><a href="timetable/TE-SEM-VI.pdf" class="download-bttn" target="_blank">Download PDF</a></button>
-    </div>
-</body>
+      <h1>SE TimeTable</h1>
+      <div id="timeTable">
+        <img
+          src="https://bunchup.s3.amazonaws.com/Final+TT_Even+CS%26E+23-24.jpg"
+          class="tt"
+          alt="se-timetable"
+        />
+      </div>
+      <div class="download">
+        <button>
+          <a
+            href="timetable/SE-SEM-VI.pdf"
+            class="download-bttn"
+            target="_blank"
+            >Download PDF</a
+          >
+        </button>
+      </div>
 
+      <h1>TE TimeTable</h1>
+      <div id="timeTable">
+        <img
+          src="https://bunchup.s3.amazonaws.com/Final+TT_Even+CS%26E+23-24+(2).jpg"
+          class="tt"
+          alt="se-timetable"
+        />
+      </div>
+      <div class="download">
+        <button>
+          <a
+            href="timetable/TE-SEM-VI.pdf"
+            class="download-bttn"
+            target="_blank"
+            >Download PDF</a
+          >
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
